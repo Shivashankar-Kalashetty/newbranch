@@ -38,7 +38,7 @@ public class LaunchAndLogIn {
 	public void LogIn() throws InterruptedException, IOException, AWTException {
 		keywords = new Keywords();
 		
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
 		System.out.println(keywords.locator("Home.LogIn"));
