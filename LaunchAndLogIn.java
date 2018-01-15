@@ -37,15 +37,9 @@ public class LaunchAndLogIn {
 	@Test
 	public void LogIn() throws InterruptedException, IOException, AWTException {
 		keywords = new Keywords();
-		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		Thread.sleep(5000);
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
-		System.out.println(keywords.locator("Home.LogIn"));
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(keywords.locator("Home.LogIn"))));
-		// driver.findElement(By.xpath(keywords.locator("Home.LogIn"))).click();
-		Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(keywords.locator("Home.username"))));
 		driver.findElement(By.xpath(keywords.locator("Home.username"))).sendKeys(username);
 		Thread.sleep(5000);
